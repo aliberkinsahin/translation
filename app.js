@@ -8,8 +8,9 @@ eventListeners()
 function eventListeners() {
     document.getElementById("translate-form").addEventListener("submit",translateWord)
     langSelection.onchange = function () {
-        testIndex.textContent = `Index: ${langSelection.selectedIndex}`
+        // testIndex.textContent = `Index: ${langSelection.selectedIndex}`
     }
+    langSelection.addEventListener("touchstart", touchStarted)
 }
 const translate = new Translate(wordInput.value, langSelection.value)
 const ui = new UI()
@@ -21,5 +22,9 @@ function translateWord(e) {
         else console.error(err)
     })
     e.preventDefault()
+}
+
+function touchStarted(e) {
+    testIndex.textContent = e
 }
 
