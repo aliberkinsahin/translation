@@ -1,2 +1,2 @@
-# translation
-Simple translation site using YandexAPI
+# Web Translator
+Simple translator using YandexAPI
